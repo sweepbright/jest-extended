@@ -2,7 +2,9 @@
   "name": "madewithlove-karma-config",
   "description": "Karma configuration for Madewithlove projects",
   "main": "index.js",
-  "keywords": ["karma-config"],
+  "keywords": [
+    "karma-config"
+  ],
   "author": {
     "name": "Madewithlove",
     "email": "heroes@madewithlove.be"
@@ -26,5 +28,6 @@
   },
   "scripts": {
     "postversion": "git push; git push --tags; npm publish"
-  }
+  },
+  "version": "0.1.0"
 }
