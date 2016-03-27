@@ -4,10 +4,18 @@
 
 **karma.conf.js**
 ```js
-var config = require('madewithlove-karma-config');
+module.exports = function(config) {
+    // Returns the Karma config object
+    // Optionally set path to tests, defaults to `tests`
+    config = require('madewithlove-karma-config')(
+        config,
+        'tests/karma'
+    );
 
-// Optionally specify path to tests, defaults to `tests`
-module.exports = config('tests/karma');
+    // Customize additional options
+    config.browsers = ['Firefox'];
+};
+
 ```
 
 **tests/index.js**
