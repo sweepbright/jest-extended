@@ -1,6 +1,5 @@
 {
   "name": "madewithlove-karma-config",
-  "version": "0.1.0",
   "description": "Karma configuration for Madewithlove projects",
   "main": "index.js",
   "keywords": ["karma-config"],
