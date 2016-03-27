@@ -1,0 +1,31 @@
+{
+  "name": "madewithlove-karma-config",
+  "version": "0.1.0",
+  "description": "Karma configuration for Madewithlove projects",
+  "main": "index.js",
+  "keywords": ["karma-config"],
+  "author": {
+    "name": "Madewithlove",
+    "email": "heroes@madewithlove.be"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "expect": "^1.14.0",
+    "expect-jsx": "^2.4.0",
+    "isparta-loader": "^2.0.0",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^0.2.3",
+    "karma-coverage": "^0.5.5",
+    "karma-mocha": "^0.2.2",
+    "karma-mocha-reporter": "^2.0.0",
+    "karma-webpack": "^1.7.0",
+    "mocha": "^2.4.5",
+    "null-loader": "^0.1.1"
+  },
+  "peerDependencies": {
+    "webpack": ">=1.12.14"
+  },
+  "scripts": {
+    "postversion": "git push; git push --tags; npm publish"
+  }
+}
