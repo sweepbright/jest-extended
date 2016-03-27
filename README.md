@@ -20,8 +20,19 @@ module.exports = function(config) {
 
 **tests/index.js**
 ```js
-const testsContext = require.context(".", true, /Test.js$/);
-testsContext.keys().forEach(testsContext);
+const testsContext = require.context('.', true, /Test.js$/);
+testsContext.keys().forEach((path) => {
+    let suite = path.replace(/\.\/(.+)Test.js/, '$1');
+
+    describe(suite, () => testsContext(path));
+});
+```
+
+**tests/Reducer/SomeReducerTest.js**
+```js
+it('can do something', () => {
+    // ...
+});
 ```
 
 ## Test utilities
