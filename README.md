@@ -6,7 +6,8 @@
 ```js
 var config = require('madewithlove-karma-config');
 
-module.exports = config;
+// Optionally specify path to tests, defaults to `tests`
+module.exports = config('tests/karma');
 ```
 
 **tests/index.js**
