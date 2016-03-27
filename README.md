@@ -23,3 +23,26 @@ module.exports = function(config) {
 const testsContext = require.context(".", true, /Test.js$/);
 testsContext.keys().forEach(testsContext);
 ```
+
+## Test utilities
+
+The package also comes with some test utilities for common needs:
+
+```js
+import expect from 'madewithlove-karma-config/expect';
+
+expect(new Immutable.Map({foo: 'bar'})).toEqualJs({
+    foo: 'bar',
+});
+
+expect(someSaga()).toEqualSaga([
+    {
+        action: put(someAction()),
+        response: 'foobar',
+    },
+    {
+        action: select(someSelector('foobar')),
+        response: 'baz',
+    }
+]);
+```

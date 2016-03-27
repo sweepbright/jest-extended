@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.4.0
+### Added
+- Added some test utilities
+
 ## 0.3.1
 ### Added
 - Added `react-test-utils` to dependencies
