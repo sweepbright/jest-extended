@@ -56,7 +56,7 @@ module.exports = function (config) {
         // test results reporter to use
         // possible values: 'dots', 'progress'
         // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-        reporters: ['mocha', 'coverage'],
+        reporters: process.env.CIRCLE_TEST_REPORTS ? ['mocha', 'junit'] : ['mocha', 'coverage'],
 
         mochaReporter: {
             showDiff: true,
@@ -65,6 +65,14 @@ module.exports = function (config) {
         coverageReporter: {
             type: 'html',
             dir: 'tests/_coverage',
+        },
+
+        junitReporter: {
+            outputDir: process.env.CIRCLE_TEST_REPORTS,
+            outputFile: 'karma.xml',
+            useBrowserName: false,
+            nameFormatter: undefined,
+            classNameFormatter: undefined
         },
 
         browsers: ['Chrome'],
