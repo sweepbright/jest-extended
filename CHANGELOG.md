@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.3.1
+### Added
+- Added `react-test-utils` to dependencies
+
 ## 0.3.0
 ### Changed
 - Package now returns the Karma configuration for flexibility
