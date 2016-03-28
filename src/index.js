@@ -23,6 +23,7 @@ module.exports = function (config, basePath) {
         ],
 
         webpack: {
+            devtool: 'inline-source-map',
             plugins: [
                 new webpack.DefinePlugin({
                     __DEVTOOLS__: true,
@@ -77,7 +78,7 @@ module.exports = function (config, basePath) {
     });
 
     // Set preprocessors
-    config.preprocessors[basePath + '/index.js'] = 'webpack';
+    config.preprocessors[basePath + '/index.js'] = ['webpack', 'sourcemap'];
 
     return config;
 };

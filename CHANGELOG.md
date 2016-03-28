@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.4.1
+### Fixed
+- Fixed incorrect paths in stack trackes
+
 ## 0.4.0
 ### Added
 - Added some test utilities
