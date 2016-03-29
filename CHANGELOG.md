@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.5.0
+### Added
+- Pack in `enzyme` by default
+
 ## 0.4.1
 ### Fixed
 - Fixed incorrect paths in stack trackes

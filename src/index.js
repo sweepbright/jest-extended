@@ -46,6 +46,10 @@ module.exports = function (config, basePath) {
                     },
                 ],
             },
+            externals: {
+                'react/lib/ExecutionEnvironment': true,
+                'react/lib/ReactContext': 'window',
+            },
         },
 
         webpackMiddleware: {
