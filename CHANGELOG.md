@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.5.1
+### Changed
+- Remove unused `react-addons-test-utils` dependency
+
 ## 0.5.0
 ### Added
 - Pack in `enzyme` by default
