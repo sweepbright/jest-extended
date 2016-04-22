@@ -2,7 +2,7 @@
   "name": "madewithlove-karma-config",
   "description": "Karma configuration for Madewithlove projects",
   "main": "src/index.js",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "keywords": [
     "karma-config"
   ],
