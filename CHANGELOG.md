@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 0.5.3
+### Fixed
+- Fixed enzyme complaining about `read/addons` dependency
+
+## 0.5.2
+### Changed
+- Update Karma to 1.x
+
 ## 0.5.1
 ### Changed
 - Remove unused `react-addons-test-utils` dependency

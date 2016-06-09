@@ -12,23 +12,23 @@
   },
   "license": "MIT",
   "dependencies": {
-    "enzyme": "^2.2.0",
-    "expect": "^1.19.0",
-    "expect-jsx": "^2.5.1",
+    "enzyme": "^2.3.0",
+    "expect": "^1.20.1",
+    "expect-jsx": "^2.6.0",
     "isparta-loader": "^2.0.0",
     "karma": "^0.13.22",
     "karma-chrome-launcher": "^1.0.1",
-    "karma-coverage": "^0.5.5",
-    "karma-junit-reporter": "^0.4.2",
+    "karma-coverage": "^1.0.0",
+    "karma-junit-reporter": "^1.0.0",
     "karma-mocha": "^1.0.1",
-    "karma-mocha-reporter": "^2.0.2",
+    "karma-mocha-reporter": "^2.0.3",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^1.7.0",
-    "mocha": "^2.4.5",
+    "mocha": "^2.5.3",
     "null-loader": "^0.1.1"
   },
   "peerDependencies": {
-    "webpack": ">=1.12.14"
+    "webpack": ">=1.13.1"
   },
   "scripts": {
     "postversion": "git push; git push --tags; npm publish"
