@@ -5,7 +5,15 @@ module.exports = function (config, basePath) {
         basePath = 'tests';
     }
 
+    var coverage = process.argv.indexOf('--coverage') !== -1;
     var coveragePath = basePath + '/_coverage';
+
+    var reporters = ['mocha'];
+    if (coverage) {
+        reporters.push('coverage');
+    } else if (process.env.CIRCLE_TEST_REPORTS) {
+        reporters.push('junit');
+    }
 
     config.set({
 
@@ -23,7 +31,7 @@ module.exports = function (config, basePath) {
         ],
 
         webpack: {
-            devtool: 'inline-source-map',
+            devtool: coverage ? 'inline-source-map' : false,
             plugins: [
                 new webpack.DefinePlugin({
                     __DEVTOOLS__: true,
@@ -34,7 +42,7 @@ module.exports = function (config, basePath) {
                     {
                         test: /\.js$/,
                         exclude: /node_modules/,
-                        loaders: ['babel', 'isparta'],
+                        loaders: coverage ? ['babel', 'isparta'] : ['babel'],
                     },
                     {
                         test: /\.json$/,
@@ -61,7 +69,7 @@ module.exports = function (config, basePath) {
         // test results reporter to use
         // possible values: 'dots', 'progress'
         // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-        reporters: process.env.CIRCLE_TEST_REPORTS ? ['mocha', 'junit'] : ['mocha', 'coverage'],
+        reporters: reporters,
 
         mochaReporter: {
             showDiff: true,
@@ -84,7 +92,7 @@ module.exports = function (config, basePath) {
     });
 
     // Set preprocessors
-    config.preprocessors[basePath + '/index.js'] = ['webpack', 'sourcemap'];
+    config.preprocessors[basePath + '/index.js'] = coverage ? ['webpack', 'sourcemap'] : ['webpack'];
 
     return config;
 };

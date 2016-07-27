@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.5.4
+### Fixed
+- Fixed code coverage being enabled without `--coverage` flag
+
 ## 0.5.3
 ### Fixed
 - Fixed enzyme complaining about `read/addons` dependency
