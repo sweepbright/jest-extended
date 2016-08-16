@@ -42,7 +42,10 @@ module.exports = function (config, basePath) {
                     {
                         test: /\.js$/,
                         exclude: /node_modules/,
-                        loaders: coverage ? ['babel', 'isparta'] : ['babel'],
+                        loader: 'babel',
+                        query: {
+                            plugins: coverage ? ['istanbul'] : [],
+                        },
                     },
                     {
                         test: /\.json$/,
@@ -89,10 +92,11 @@ module.exports = function (config, basePath) {
         },
 
         browsers: ['Chrome'],
+        browserNoActivityTimeout: 20000,
     });
 
     // Set preprocessors
-    config.preprocessors[basePath + '/index.js'] = coverage ? ['webpack', 'sourcemap'] : ['webpack'];
+    config.preprocessors[basePath + '/index.js'] = ['webpack'];
 
     return config;
 };

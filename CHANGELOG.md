@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.6.0
+### Changed
+- Now using `babel-plugin-istanbul` instead of the now deprecated `isparta-loader`
+
 ## 0.5.4
 ### Fixed
 - Fixed code coverage being enabled without `--coverage` flag
