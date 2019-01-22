@@ -1,10 +1,16 @@
 {
-  "name": "madewithlove-karma-config",
-  "description": "Karma configuration for Madewithlove projects",
+  "name": "@sweepbright/jest-extended",
+  "description": "Additional jest matchers",
   "main": "src/index.js",
   "version": "0.6.0",
   "keywords": [
-    "karma-config"
+    "jest",
+    "matchers",
+    "extend",
+    "extended",
+    "test",
+    "testing",
+    "assertions"
   ],
   "author": {
     "name": "Madewithlove",
